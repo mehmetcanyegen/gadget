@@ -23,10 +23,10 @@ layout = [[sg.Text('Generated Password', size=(31,1)), sg.Text('Character Size')
               sg.Button("+5", size=(2, 1), key='_BUTTON_INC_5_')
           ],
           [
-            sg.Radio(text='Brutal', group_id=1, key="_LEVEL_"),
-           sg.Radio(text='Hard', group_id=1, key="_LEVEL_", default=True),
-           sg.Radio(text='Moderate', group_id=1, key="_LEVEL_"),
-           sg.Radio(text='Simple',group_id=1, key="_LEVEL_"),
+            sg.Radio(text='Brutal', group_id=1, key="_LEVEL_0_"),
+           sg.Radio(text='Hard', group_id=1, key="_LEVEL_1_", default=True),
+           sg.Radio(text='Moderate', group_id=1, key="_LEVEL_2_"),
+           sg.Radio(text='Simple',group_id=1, key="_LEVEL_3_"),
            ],
           [sg.Button('Generate', size=(22, 1))]]
 
@@ -40,13 +40,13 @@ while True:
         break
     if event == sg.WIN_CLOSED or event == 'Generate':
         level = None
-        if values["_LEVEL_"]:
+        if values["_LEVEL_0_"]:
             level = string.ascii_letters + string.digits + string.punctuation
-        if values["_LEVEL_0"]:
+        if values["_LEVEL_1_"]:
             level = string.ascii_letters + string.digits
-        if values["_LEVEL_1"]:
+        if values["_LEVEL_2_"]:
             level = string.ascii_lowercase
-        if values["_LEVEL_2"]:
+        if values["_LEVEL_3_"]:
             level = string.digits
         generated_result = id_generator(size=number_size,chars=level)
         clipboard.copy(generated_result)
