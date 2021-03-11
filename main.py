@@ -7,7 +7,6 @@ import clipboard
 def id_generator(size=6, chars=string.ascii_letters + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
-
 number_size = 12
 generated_result = id_generator(number_size)
 clipboard.copy(generated_result)
