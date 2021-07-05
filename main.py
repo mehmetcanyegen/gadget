@@ -38,16 +38,16 @@ while True:
     if event is None:
         break
     if event == sg.WIN_CLOSED or event == 'Generate':
-        level = None
+        chars = None
         if values["_LEVEL_0_"]:
-            level = string.ascii_letters + string.digits + string.punctuation
+            chars = string.ascii_letters + string.digits + string.punctuation
         if values["_LEVEL_1_"]:
-            level = string.ascii_letters + string.digits
+            chars = string.ascii_letters + string.digits
         if values["_LEVEL_2_"]:
-            level = string.ascii_lowercase
+            chars = string.ascii_lowercase
         if values["_LEVEL_3_"]:
-            level = string.digits
-        generated_result = id_generator(size=number_size,chars=level)
+            chars = string.digits
+        generated_result = id_generator(size=number_size, chars=chars)
         clipboard.copy(generated_result)
         window['-OUTPUT-'].update(generated_result)
 
