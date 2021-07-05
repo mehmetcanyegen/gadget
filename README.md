@@ -1,5 +1,5 @@
 # gadget
-Simple password generator written in python
+simple password generator written in python
 # development instructions
 install necessary libraries using  <br /> 
 ``pip install -r requirements.txt`` 
