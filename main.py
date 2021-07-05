@@ -11,7 +11,7 @@ number_size = 12
 generated_result = id_generator(number_size)
 clipboard.copy(generated_result)
 
-sg.theme('DarkAmber')
+# sg.theme('DarkAmber')
 layout = [[sg.Text('Generated Password', size=(31,1)), sg.Text('Character Size') ],
           [
               sg.InputText(generated_result, key='-OUTPUT-', size=(30, 1)),
