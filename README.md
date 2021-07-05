@@ -8,7 +8,7 @@ install necessary libraries using  <br />
 and run main.py <br /> 
 
 # distribute as one single exe
-open terminal and type <br /><br/>``dist`` on windows<br/><br/>
+open terminal (cmd for windows) and type <br /><br/>``dist`` on windows<br/><br/>
 ``python -m PyInstaller  --onefile --name=Gadget --windowed --icon=app.ico main.py`` on linux
 
 # python version
